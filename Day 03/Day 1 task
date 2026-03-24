@@ -1,0 +1,7 @@
+1) Range for
+    short - -32768 to 32767
+    int - -2147483648 to 2147483647
+2) Purpose of comma
+   The comma is only to be used in  System.out.printf
+3) Why class name and file name have to be same?
+   To ensure that the Java compiler and JVM(Java Virtual Mission) can instantly locate the correct source and byte code for a public class without searching through every file.   
