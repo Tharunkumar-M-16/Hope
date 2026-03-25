@@ -1,0 +1,83 @@
+                                                   LEETCODE SOLUTIONS – DAY 5
+
+PROBLEM 1108 – Defanging an IP address
+class Solution {
+    public String defangIPaddr(String address) {
+        return address.replace(".", "[.]");
+    }
+}
+
+Problem 1221 – Split a string in balanced strings
+class Solution {
+    public int balancedStringSplit(String s) {
+        int bal_var=0,ans=0;
+        for(int i=0;i<s.length();i++){
+            if(s.charAt(i)=='L'){
+                bal_var+=1;
+            }
+            else{
+                bal_var-=1;
+            }
+            if(bal_var==0){
+                ans+=1;
+            }
+        }
+        return ans;
+    }
+}
+
+
+
+
+Problem 28 – Find the index of first occurrence in a string
+class Solution {
+    public int strStr(String haystack, String needle) {
+         return haystack.indexOf(needle);
+    }
+}
+
+Problem 344 – Reverse String
+class Solution {
+    public void reverseString(char[] s) {
+        int start=0;
+        int end=s.length-1;
+        while(start<end){
+            char ch=s[start];
+            s[start]=s[end];
+            s[end]=ch;
+            start++;
+            end--;
+        }
+    }
+}
+
+Problem 557 – Reverse words in a string
+class Solution {
+    public String reverseWords(String s) {
+        StringBuilder res = new StringBuilder();
+        String[] words=s.split(" ");
+        for(String rev : words){
+            StringBuilder tmp=new StringBuilder(rev);
+            res.append(tmp.reverse()).append(" ");
+        }
+        return res.toString().trim();
+    }
+}
+
+Problem 58 – Length of last word
+class Solution {
+    public int lengthOfLastWord(String s) {
+        int length = 0;
+        int i = s.length() - 1;
+        // Step 1: Skip trailing spaces
+        while (i >= 0 && s.charAt(i) == ' ') {
+            i--;
+        }
+        // Step 2: Count the last word length
+        while (i >= 0 && s.charAt(i) != ' ') {
+            length++;
+            i--;
+        }
+        return length;
+    }
+}
