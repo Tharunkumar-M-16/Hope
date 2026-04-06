@@ -1,11 +1,11 @@
 package Days.Day6;
 
 public class crOverloading {
-    void crOverloading() {
+    crOverloading() {
         System.out.println("Default Constructor");
     }
 
-    void crOverloading(int a) {
+    crOverloading(int a) {
         System.out.println("Parameterized Constructor");
     }
 

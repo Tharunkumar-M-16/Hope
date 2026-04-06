@@ -2,23 +2,13 @@ package Days.Day7;
 
 public class SimpleInheritance {
     public static void main(String[] args) {
-        Parent p1 = new Parent();
-        p1.display();
-        Child c1 = new Child();
-        c1.display();
+        // Using the Parent and Child classes from Inheritance.java
+        // This file demonstrates simple inheritance using existing classes
+        Animal animal = new Animal();
+        animal.display();
 
-    }
-}
-
-class Parent {
-    void display() {
-        System.out.print("Parent Class");
-    }
-}
-
-class Child extends Parent {
-    void display() {
-        super.display();
-        System.out.print("Child Class");
+        Dog dog = new Dog();
+        dog.display();
+        dog.Barking();
     }
 }

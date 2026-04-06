@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class Savings {
+class SavingsAccount {
     void deposit(int bal) {
         System.out.println("Savings: Deposited " + bal);
     }
@@ -10,7 +10,7 @@ class Savings {
     }
 }
 
-class Current {
+class CurrentAccount {
     void deposit(int bal) {
         System.out.println("Current: Deposited " + bal);
     }
@@ -20,7 +20,7 @@ class Current {
     }
 }
 
-class FixedDeposit {
+class FixedDepositAccount {
     void deposit(int bal) {
         System.out.println("Fixed Deposit: Created with " + bal);
     }
@@ -39,7 +39,7 @@ public class BankApp {
 
             switch (choice) {
                 case 1:
-                    Savings s = new Savings();
+                    SavingsAccount s = new SavingsAccount();
                     System.out.print("1. Deposit 2. Withdraw: ");
                     int opt = sc.nextInt();
                     if (opt == 1) {
@@ -52,7 +52,7 @@ public class BankApp {
                     s.deposit(Bal);
                     break;
                 case 2:
-                    Current c = new Current();
+                    CurrentAccount c = new CurrentAccount();
                     System.out.print("1. Deposit 2. Withdraw: ");
                     opt = sc.nextInt();
                     if (opt == 1) {
@@ -65,7 +65,7 @@ public class BankApp {
                     c.deposit(Bal);
                     break;
                 case 3:
-                    FixedDeposit fd = new FixedDeposit();
+                    FixedDepositAccount fd = new FixedDepositAccount();
                     System.out.print("Amount: ");
                     Bal = sc.nextInt();
                     fd.deposit(Bal);

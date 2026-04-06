@@ -1,30 +1,32 @@
 import java.util.Scanner;
 
-class Savings {
+class SavingsBank {
     void deposit(int bal) {
         System.out.println("Savings: Deposited " + bal);
     }
+
     void withdraw(int bal) {
         System.out.println("Savings: Withdrew " + bal);
     }
 }
 
-class Current {
+class CurrentBank {
     void deposit(int bal) {
         System.out.println("Current: Deposited " + bal);
     }
+
     void withdraw(int bal) {
         System.out.println("Current: Withdrew " + bal);
     }
 }
 
-class FixedDeposit {
+class FixedDepositBank {
     void deposit(int bal) {
         System.out.println("Fixed Deposit: Created with " + bal);
     }
 }
 
-public class BankApp {
+public class RootBankApp {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int Bal = 1000;
@@ -37,7 +39,7 @@ public class BankApp {
 
             switch (choice) {
                 case 1:
-                    Savings s = new Savings();
+                    SavingsBank s = new SavingsBank();
                     System.out.print("1. Deposit 2. Withdraw: ");
                     int opt = sc.nextInt();
                     if (opt == 1) {
@@ -50,7 +52,7 @@ public class BankApp {
                     s.deposit(Bal);
                     break;
                 case 2:
-                    Current c = new Current();
+                    CurrentBank c = new CurrentBank();
                     System.out.print("1. Deposit 2. Withdraw: ");
                     opt = sc.nextInt();
                     if (opt == 1) {
@@ -63,7 +65,7 @@ public class BankApp {
                     c.deposit(Bal);
                     break;
                 case 3:
-                    FixedDeposit fd = new FixedDeposit();
+                    FixedDepositBank fd = new FixedDepositBank();
                     System.out.print("Amount: ");
                     Bal = sc.nextInt();
                     fd.deposit(Bal);
