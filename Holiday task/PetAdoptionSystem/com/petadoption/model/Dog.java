@@ -2,7 +2,7 @@ package com.petadoption.model;
 
 public class Dog extends Pet {
     private String breed;
-    private String size; // e.g., Small, Medium, Large
+    private String size; 
 
     public Dog(String id, String name, int age, double adoptionFee, boolean isVaccinated, String breed, String size) {
         super(id, name, age, adoptionFee, isVaccinated);
@@ -13,7 +13,6 @@ public class Dog extends Pet {
     public String getBreed() { return breed; }
     public String getSize() { return size; }
 
-    // Polymorphism: Implementing abstract methods
     @Override
     public void makeSound() {
         System.out.println(getName() + " says: Woof! Woof!");

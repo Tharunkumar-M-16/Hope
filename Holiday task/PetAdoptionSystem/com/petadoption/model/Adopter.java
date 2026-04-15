@@ -17,7 +17,7 @@ public class Adopter {
     public String getName() { return name; }
     public String getContactInfo() { return contactInfo; }
     
-    // Encapsulation of the pet list modification
+    
     public void addAdoptedPet(Pet pet) {
         if (pet != null) {
             adoptedPets.add(pet);
@@ -25,7 +25,7 @@ public class Adopter {
     }
     
     public List<Pet> getAdoptedPets() {
-        return new ArrayList<>(adoptedPets); // Return a copy to protect internal state
+        return new ArrayList<>(adoptedPets);
     }
 
     @Override

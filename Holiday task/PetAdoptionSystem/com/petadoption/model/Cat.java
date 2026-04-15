@@ -10,7 +10,7 @@ public class Cat extends Pet {
 
     public boolean isIndoorOnly() { return isIndoorOnly; }
 
-    // Polymorphism: Implementing abstract methods
+
     @Override
     public void makeSound() {
         System.out.println(getName() + " says: Meow~");
